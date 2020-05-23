@@ -7,7 +7,10 @@ self.addEventListener('install', function(event) {
           '/index.html',
           '/src/css/app.css',
           '/manifest.json',
-          '/src/images/icons/icon.96x96.png',
+          '/src/images/icons/icon-96x96.png',
+          '/src/images/icons/icon-164x164.png',
+          '/src/images/icons/icon-192x192.png',
+          '/src/images/icons/icon-512x512.png',
           '/src/js/app.js'
         ])
       })
