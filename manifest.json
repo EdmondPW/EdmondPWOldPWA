@@ -3,9 +3,13 @@
   "short_name": "PWAGram",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "display": "browser",
-  "Scope": "/",
-  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "Scope": ".",
+  "start_url": "/index.html",
+  "description": "A simple Instagram Clone, implementing a lot of PWA love.",
+  "dir": "ltr",
+  "lang": "en-US",
   "icons": [
     {
       "src": "src/images/icons/icon-72x72.png",
