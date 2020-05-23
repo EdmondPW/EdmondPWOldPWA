@@ -8,8 +8,9 @@ self.addEventListener('install', function(event) {
           '/src/css/app.css',
           '/manifest.json',
           '/src/images/icons/icon-96x96.png',
-          '/src/images/icons/icon-164x164.png',
+          '/src/images/icons/icon-152x152.png',
           '/src/images/icons/icon-192x192.png',
+          '/src/images/icons/icon-384x384.png',
           '/src/images/icons/icon-512x512.png',
           '/src/js/app.js'
         ])
