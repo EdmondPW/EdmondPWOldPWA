@@ -14,7 +14,7 @@ self.addEventListener('install', function(event) {
           '/src/images/icons/icon-512x512.png',
           '/src/js/app.js',
           '/src/js/bootstrap.min.js',
-          '/src/js/jquery-3.5.1.slim.min.js'
+          '/src/js/jquery-3.5.1.min.js'
         ])
       })
   );
