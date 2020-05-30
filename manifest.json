@@ -1,5 +1,5 @@
 {
-  "name": "Instagram as Progressive Web App",
+  "name": "Recipes Saver",
   "short_name": "PWAGram",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
@@ -7,7 +7,7 @@
   "orientation": "portrait-primary",
   "Scope": ".",
   "start_url": "/index.html",
-  "description": "A simple Instagram Clone, implementing a lot of PWA love.",
+  "description": "A simple app to save your recipes.",
   "dir": "ltr",
   "lang": "en-US",
   "icons": [
