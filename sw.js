@@ -5,14 +5,15 @@ self.addEventListener('install', function(event) {
         cache.addAll([
           '/',
           '/index.html',
-          '/src/css/app.css',
+          '/src/css/bootstrap.min.css',
           '/manifest.json',
           '/src/images/icons/icon-96x96.png',
           '/src/images/icons/icon-152x152.png',
           '/src/images/icons/icon-192x192.png',
           '/src/images/icons/icon-384x384.png',
           '/src/images/icons/icon-512x512.png',
-          '/src/js/app.js'
+          '/src/js/bootstrap.min.js',
+          '/src/js/jquery-3.5.1.slim.min.js'
         ])
       })
   );
