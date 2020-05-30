@@ -9,7 +9,7 @@ $( "#inputSearch" ).click(function() {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr="+${input},
+    "url": "https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr="+input,
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
