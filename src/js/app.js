@@ -5,11 +5,11 @@
 navigator.serviceWorker.register('/sw.js');
 
 $( "#inputSearch" ).click(function() {
-  var input = document.getElementById("Search_Recipe").value;
+  var searchInput = document.getElementById("Search_Recipe").value;
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr="+input,
+    "url": "https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr="+searchInput,
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
