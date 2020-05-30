@@ -4,7 +4,7 @@
 
 navigator.serviceWorker.register('/sw.js');
 
-function seacrh(){
+function search(){
   var input = document.getElementById("Search_Recipe").value;
   var settings = {
     "async": true,
