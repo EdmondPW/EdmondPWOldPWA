@@ -4,7 +4,7 @@
 
 navigator.serviceWorker.register('/sw.js');
 
-function searchRecipe(){
+$( "#inputSearch" ).click(function() {
   var input = document.getElementById("Search_Recipe").value;
   var settings = {
     "async": true,
@@ -20,6 +20,10 @@ function searchRecipe(){
   $.ajax(settings).done(function (response) {
     console.log(response);
   });
+});
+
+function searchRecipe(){
+  
 }
 
 
