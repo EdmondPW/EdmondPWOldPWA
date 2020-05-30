@@ -4,10 +4,6 @@
 
 navigator.serviceWorker.register('/sw.js');
 
-button.addEventListener('click', function() {
-  animate();
-});
-
 var deferredPrompt;
 window.addEventListener('beforeinstallprompt', function(event) {
   console.log('beforeinstallprompt fired');
