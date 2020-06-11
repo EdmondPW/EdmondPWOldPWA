@@ -33,7 +33,7 @@ var firebaseConfig = {
     var email=document.getElementById("email");
     var password=document.getElementById("pass");
 
-    const promise=auth.signInWithEmailAndPassword(email.value,password.value);
+    promise=auth.signInWithEmailAndPassword(email.value,password.value);
     promise.catch(e=>alert(e.message));
 
     alert("Login ");
