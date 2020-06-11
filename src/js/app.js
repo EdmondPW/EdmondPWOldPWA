@@ -16,7 +16,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  const auth=firebase.auth();
+  auth=firebase.auth();
 
   function signup(){
     var email=document.getElementById("email");
