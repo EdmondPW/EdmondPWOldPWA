@@ -62,6 +62,7 @@ function searchRecipe(){
   
 }
 
+function storeRecipe(){}
 
 var deferredPrompt;
 window.addEventListener('beforeinstallprompt', function(event) {
