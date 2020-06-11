@@ -5,6 +5,8 @@ self.addEventListener('install', function(event) {
         cache.addAll([
           '/',
           '/index.html',
+          'login.html',
+          'signup.html',
           '/src/css/bootstrap.min.css',
           '/manifest.json',
           '/src/images/icons/icon-96x96.png',
