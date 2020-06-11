@@ -42,6 +42,7 @@ var firebaseConfig = {
 
 $( "#inputSearch" ).click(function() {
   var searchInput = document.getElementById("Search_Recipe").value;
+  alert(searchInput);
   var settings = {
     "async": true,
     "crossDomain": true,
