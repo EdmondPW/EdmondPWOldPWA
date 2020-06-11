@@ -2,6 +2,41 @@
 //var courseFeatureElements = document.querySelectorAll('.course-feature');
 //var button = document.querySelector('button');
 
+var firebaseConfig = {
+    apiKey: "AIzaSyBqR8w2NzQsx9Bi1KDKDzKrgxF_cZgdawo",
+    authDomain: "mobileweb-313e5.firebaseapp.com",
+    databaseURL: "https://mobileweb-313e5.firebaseio.com",
+    projectId: "mobileweb-313e5",
+    storageBucket: "mobileweb-313e5.appspot.com",
+    messagingSenderId: "486468352596",
+    appId: "1:486468352596:web:05086f7651838ec7818bc1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const auth=firebase.auth();
+
+  function signup(){
+    var email=document.getElementById("email");
+    var password=document.getElementById("pass");
+
+    const promise=auth.createUserWithEmailAndPassword(email.value,password.value);
+    promise.catch(e=>alert(e.message));
+
+    alert("Sign Up");
+  }
+
+  function signin(){
+    alert("tes");
+    var email=document.getElementById("email");
+    var password=document.getElementById("pass");
+
+    const promise=auth.signInWithEmailAndPassword(email.value,password.value);
+    promise.catch(e=>alert(e.message));
+
+    alert("Login ");
+  }
+
 navigator.serviceWorker.register('/sw.js');
 
 $( "#inputSearch" ).click(function() {
