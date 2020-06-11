@@ -2,6 +2,8 @@
 //var courseFeatureElements = document.querySelectorAll('.course-feature');
 //var button = document.querySelector('button');
 
+navigator.serviceWorker.register('/sw.js');
+
 var firebaseConfig = {
     apiKey: "AIzaSyBqR8w2NzQsx9Bi1KDKDzKrgxF_cZgdawo",
     authDomain: "mobileweb-313e5.firebaseapp.com",
@@ -37,7 +39,6 @@ var firebaseConfig = {
     alert("Login ");
   }
 
-navigator.serviceWorker.register('/sw.js');
 
 $( "#inputSearch" ).click(function() {
   var searchInput = document.getElementById("Search_Recipe").value;
