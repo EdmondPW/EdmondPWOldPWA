@@ -23,9 +23,13 @@ navigator.serviceWorker.register('/sw.js');
     var password=document.getElementById("pass");
 
     const promise=auth.createUserWithEmailAndPassword(email.value,password.value);
-    promise.catch(e=>alert(e.message));
+    promise.catch(function(err{
+                            alert("Gagal SignUp");
+                            });
+    )
 
     alert("Sign Up");
+    window.location.href="login.html";
   }
 
   function signin(){
