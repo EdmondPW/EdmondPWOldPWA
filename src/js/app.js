@@ -4,14 +4,14 @@
 
 navigator.serviceWorker.register('/sw.js');
 
-var firebaseConfig = {
-    apiKey: "AIzaSyBqR8w2NzQsx9Bi1KDKDzKrgxF_cZgdawo",
-    authDomain: "mobileweb-313e5.firebaseapp.com",
-    databaseURL: "https://mobileweb-313e5.firebaseio.com",
-    projectId: "mobileweb-313e5",
-    storageBucket: "mobileweb-313e5.appspot.com",
-    messagingSenderId: "486468352596",
-    appId: "1:486468352596:web:05086f7651838ec7818bc1"
+ var firebaseConfig = {
+    apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+    authDomain: "resepsaver.firebaseapp.com",
+    databaseURL: "https://resepsaver.firebaseio.com",
+    projectId: "resepsaver",
+    storageBucket: "resepsaver.appspot.com",
+    messagingSenderId: "104620766512",
+    appId: "1:104620766512:web:47b12acaedf67edff144f5"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -29,14 +29,20 @@ var firebaseConfig = {
   }
 
   function signin(){
-    alert("tes");
+    //alert("tes");
     var email=document.getElementById("email");
     var password=document.getElementById("pass");
 
     const promise=auth.signInWithEmailAndPassword(email.value,password.value);
-    promise.catch(e=>alert(e.message));
-
-    alert("Login ");
+    promise.catch(function(err{
+                            alert("Gagal Login");
+                            });
+    )
+    auth.onAuthStateChanged(function(res){
+        if(res){
+            window.location.href="index.html";
+        }
+    }
   }
 
 
