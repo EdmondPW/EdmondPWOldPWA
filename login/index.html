@@ -33,35 +33,35 @@
   <p>Tidak punya akun? <a href="../../signup"> Sign Up</a> </p>
     </div>
     </center>
-    <script>
-       var firebaseConfig = {
-          apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
-          authDomain: "resepsaver.firebaseapp.com",
-          databaseURL: "https://resepsaver.firebaseio.com",
-          projectId: "resepsaver",
-          storageBucket: "resepsaver.appspot.com",
-          messagingSenderId: "104620766512",
-          appId: "1:104620766512:web:47b12acaedf67edff144f5"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+    <script src="../../src/js/database.js">
+//        var firebaseConfig = {
+//           apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+//           authDomain: "resepsaver.firebaseapp.com",
+//           databaseURL: "https://resepsaver.firebaseio.com",
+//           projectId: "resepsaver",
+//           storageBucket: "resepsaver.appspot.com",
+//           messagingSenderId: "104620766512",
+//           appId: "1:104620766512:web:47b12acaedf67edff144f5"
+//         };
+//         // Initialize Firebase
+//         firebase.initializeApp(firebaseConfig);
 
-        const auth=firebase.auth();
-        function signin(){
-          //alert("tes");
-          var email=document.getElementById("email");
-          var password=document.getElementById("pass");
+//         const auth=firebase.auth();
+//         function signin(){
+//           //alert("tes");
+//           var email=document.getElementById("email");
+//           var password=document.getElementById("pass");
 
-          const promise=auth.signInWithEmailAndPassword(email.value,password.value);
-          promise.catch(function(err){
-                                  alert("Gagal Login");
-                                  });
-          auth.onAuthStateChanged(function(res){
-              if(res){
-                  window.location.href="../index.html";
-              }
-          })
-        }
+//           const promise=auth.signInWithEmailAndPassword(email.value,password.value);
+//           promise.catch(function(err){
+//                                   alert("Gagal Login");
+//                                   });
+//           auth.onAuthStateChanged(function(res){
+//               if(res){
+//                   window.location.href="../index.html";
+//               }
+//           })
+//         }
      </script
   </body>
 </html>
