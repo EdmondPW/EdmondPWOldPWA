@@ -14,7 +14,7 @@ $( "#inputSearch" ).click(function() {
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log(response.hit);
     });
     //var settings = {
       //"async": true,
@@ -28,6 +28,6 @@ $( "#inputSearch" ).click(function() {
     //}
   
     //$.ajax(settings).done(function (response) {
-      //console.log(response.hit);
+      //console.log(response);
     //});
   });
