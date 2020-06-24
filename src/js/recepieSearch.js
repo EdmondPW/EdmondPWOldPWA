@@ -9,13 +9,14 @@ $( "#inputSearch" ).click(function() {
                 "x-rapidapi-key": "ed79f9f0b7msh65c44d70d45c322p1f8f63jsne93f7593dc3d"
             }
         })
-        .then(response => {
+        .then(response => response.json()).then(data=>console.log(data));
+                {
             response.json().then(function(d){
                 for(i in d.hits){
                     console.log(i);
-                }
-            }
-        })
+//                 }
+//             }
+//         })
         .catch(err => {
             console.log(err);
         });
