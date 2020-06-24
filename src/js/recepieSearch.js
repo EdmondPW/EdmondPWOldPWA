@@ -11,6 +11,7 @@ $( "#inputSearch" ).click(function() {
     var show=document.getElementById('resep');
     var div2=document.getElementById('j');
     var bum=document.getElementById('bumbu');
+	show.innerHTML="";
     fetch("https://edamam-recipe-search.p.rapidapi.com/search?q="+searchInput, {
 			"method": "GET",
 			"headers": {
