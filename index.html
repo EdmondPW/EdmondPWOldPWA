@@ -22,35 +22,38 @@
     <title>Recipe Saver</title>
 </head>
 <body>
-    <script>
+    <script src="./src/js/database.js">
       // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
-        authDomain: "resepsaver.firebaseapp.com",
-        databaseURL: "https://resepsaver.firebaseio.com",
-        projectId: "resepsaver",
-        storageBucket: "resepsaver.appspot.com",
-        messagingSenderId: "104620766512",
-        appId: "1:104620766512:web:47b12acaedf67edff144f5"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.auth.Auth.Persistence.LOCAL;
+//       var firebaseConfig = {
+//         apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+//         authDomain: "resepsaver.firebaseapp.com",
+//         databaseURL: "https://resepsaver.firebaseio.com",
+//         projectId: "resepsaver",
+//         storageBucket: "resepsaver.appspot.com",
+//         messagingSenderId: "104620766512",
+//         appId: "1:104620766512:web:47b12acaedf67edff144f5"
+//       };
+//       // Initialize Firebase
+//       firebase.initializeApp(firebaseConfig);
+//       firebase.auth.Auth.Persistence.LOCAL;
 
-      firebase.auth().onAuthStateChanged(function(res){
-      if(res){
-        alert("Welcome")
-      }
-      else{
-        alert("You must sign in")
-        window.location.href="./login";
-      }
-     })
+//       firebase.auth().onAuthStateChanged(function(res){
+//       if(res){
+//         alert("Welcome")
+//       }
+//       else{
+//         alert("You must sign in")
+//         window.location.href="./login";
+//       }
+//      })
 //       firebase.auth().signOut().then(function() {
 //       // Sign-out successful.
 //       }).catch(function(error) {
 //         // An error happened.
 //       });
+    </script>
+    <script>
+        cekIfLoginOrNot();
     </script>
     <h1>Test</h1>
 
