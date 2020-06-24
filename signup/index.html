@@ -11,7 +11,8 @@
     <script src="/src/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
-    <script src="/src/js/app.js"></script>
+    <script src="../../src/js/app.js"></script>
+    <script src="../../src/js/database.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -38,33 +39,33 @@
     </div>
     </center>
 <script>
-       var firebaseConfig = {
-        apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
-        authDomain: "resepsaver.firebaseapp.com",
-        databaseURL: "https://resepsaver.firebaseio.com",
-        projectId: "resepsaver",
-        storageBucket: "resepsaver.appspot.com",
-        messagingSenderId: "104620766512",
-        appId: "1:104620766512:web:47b12acaedf67edff144f5"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
+//        var firebaseConfig = {
+//         apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+//         authDomain: "resepsaver.firebaseapp.com",
+//         databaseURL: "https://resepsaver.firebaseio.com",
+//         projectId: "resepsaver",
+//         storageBucket: "resepsaver.appspot.com",
+//         messagingSenderId: "104620766512",
+//         appId: "1:104620766512:web:47b12acaedf67edff144f5"
+//       };
+//       // Initialize Firebase
+//       firebase.initializeApp(firebaseConfig);
 
-      const auth=firebase.auth();
+//       const auth=firebase.auth();
 
-      function signup(){
-        console.log("tes");
-        var email=document.getElementById("email");
-        var password=document.getElementById("pass");
+//       function signup(){
+//         console.log("tes");
+//         var email=document.getElementById("email");
+//         var password=document.getElementById("pass");
 
-        const promise=auth.createUserWithEmailAndPassword(email.value,password.value);
-        promise.catch(function(err){
-                                alert("Gagal SignUp");
-                                });
+//         const promise=auth.createUserWithEmailAndPassword(email.value,password.value);
+//         promise.catch(function(err){
+//                                 alert("Gagal SignUp");
+//                                 });
 
-        alert("Sign Up");
-        window.location.href="../../login";
-      }
+//         alert("Sign Up");
+//         window.location.href="../../login";
+    //  }
     </script>
   </body>
 </html>
