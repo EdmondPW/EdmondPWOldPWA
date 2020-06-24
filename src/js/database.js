@@ -39,7 +39,7 @@ var firebaseConfig = {
           });
 
           alert("Sign Up");
-          window.location.href="./login";
+          window.location.href="../../login";
         }
 
         function signin(){
@@ -53,7 +53,7 @@ var firebaseConfig = {
                                   });
           auth.onAuthStateChanged(function(res){
               if(res){
-                  window.location.href="index.html";
+                  window.location.href="../index.html";
               }
           })
         }
