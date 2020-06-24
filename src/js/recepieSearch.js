@@ -1,14 +1,13 @@
-$( "#inputSearch" ).click(function() {
-    	var simpan_arr = new Array();
-	var searchInput='';
-	var calories=[];
+    var simpan_arr = new Array();
+    var searchInput='';
+    var calories=[];
     var images=[];
     var ingredients=[];
     var totaltime=[];
     var label=[];
     var totali=0;
     var totalj=[];
-	function input() {
+$( "#inputSearch" ).click(function() {
 		totali=0;
 		totalj=[];
 		searchInput='';
@@ -61,45 +60,7 @@ $( "#inputSearch" ).click(function() {
 	        });
 	        
 	        //console.log(ingredients);
-  	}
-  function save(idx){
-  	console.log("Total I: "+totali);
-  	console.log("Total J: "+totalj);
-  	var index=document.getElementById("save"+idx).value;
-  	var sizej=totalj[index];
-  	console.log("index: "+index);
-  	console.log("sizej: "+sizej);
-  	console.log("Label index: "+label[index]);
-  	//console.log(ingredients[index]);
-  	var resepsave='';
-  	var ingredients_arr=ingredients[index];
-  	for(i in ingredients_arr){
-  		console.log(ingredients_arr[i]);
-  	}
-  	resepsave=ingredients_arr.toString();
-  	console.log(resepsave)
-  	var firebaseConfig = {
-    apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
-    authDomain: "resepsaver.firebaseapp.com",
-    databaseURL: "https://resepsaver.firebaseio.com",
-    projectId: "resepsaver",
-    storageBucket: "resepsaver.appspot.com",
-    messagingSenderId: "104620766512",
-    appId: "1:104620766512:web:47b12acaedf67edff144f5"
-  };
-  firebase.initializeApp(firebaseConfig);
-  console.log(firebase);
-  	var database=firebase.database();  
-	var ref=database.ref('resepfavorit');
-	var data={
-	  	email: "edmond@mail.com",
-	  	label: label[index],
-	  	kalori: calories[index],
-	  	image: images[index],
-	  	resep: resepsave
-	  }
-	 ref.push(data);
-  }
+
 //     var searchInput = document.getElementById("Search_Recipe").value;
 //     alert(searchInput);
     
@@ -150,3 +111,41 @@ $( "#inputSearch" ).click(function() {
       //console.log(response);
     //});
   });
+  function save(idx){
+  	console.log("Total I: "+totali);
+  	console.log("Total J: "+totalj);
+  	var index=document.getElementById("save"+idx).value;
+  	var sizej=totalj[index];
+  	console.log("index: "+index);
+  	console.log("sizej: "+sizej);
+  	console.log("Label index: "+label[index]);
+  	//console.log(ingredients[index]);
+  	var resepsave='';
+  	var ingredients_arr=ingredients[index];
+  	for(i in ingredients_arr){
+  		console.log(ingredients_arr[i]);
+  	}
+  	resepsave=ingredients_arr.toString();
+  	console.log(resepsave)
+  	var firebaseConfig = {
+	    apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+	    authDomain: "resepsaver.firebaseapp.com",
+	    databaseURL: "https://resepsaver.firebaseio.com",
+	    projectId: "resepsaver",
+	    storageBucket: "resepsaver.appspot.com",
+	    messagingSenderId: "104620766512",
+	    appId: "1:104620766512:web:47b12acaedf67edff144f5"
+	  };
+	  firebase.initializeApp(firebaseConfig);
+	  console.log(firebase);
+		var database=firebase.database();  
+		var ref=database.ref('resepfavorit');
+		var data={
+			email: "edmond@mail.com",
+			label: label[index],
+			kalori: calories[index],
+			image: images[index],
+			resep: resepsave
+		  }
+		 ref.push(data);
+  	}
