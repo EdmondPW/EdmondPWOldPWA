@@ -136,7 +136,7 @@ $( "#inputSearch" ).click(function() {
 	    messagingSenderId: "104620766512",
 	    appId: "1:104620766512:web:47b12acaedf67edff144f5"
 	  };
-	  firebase.initializeApp(firebaseConfig);
+	  //firebase.initializeApp(firebaseConfig);
 	  console.log(firebase);
 		var database=firebase.database();  
 		var ref=database.ref('resepfavorit');
