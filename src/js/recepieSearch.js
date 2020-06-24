@@ -10,16 +10,16 @@ $( "#inputSearch" ).click(function() {
             }
         })
         .then(response => response.json()).then(data=>console.log(data));
-                {
-            response.json().then(function(d){
-                for(i in d.hits){
-                    console.log(i);
+//                 {
+//             response.json().then(function(d){
+//                 for(i in d.hits){
+//                     console.log(i);
 //                 }
 //             }
-//         })
-        .catch(err => {
-            console.log(err);
-        });
+//          })
+//         .catch(err => {
+//             console.log(err);
+//         });
 //     var settings = {
 //         "async": true,
 //         "crossDomain": true,
