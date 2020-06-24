@@ -127,15 +127,15 @@ $( "#inputSearch" ).click(function() {
   	}
   	resepsave=ingredients_arr.toString();
   	console.log(resepsave)
-  	var firebaseConfig = {
-	    apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
-	    authDomain: "resepsaver.firebaseapp.com",
-	    databaseURL: "https://resepsaver.firebaseio.com",
-	    projectId: "resepsaver",
-	    storageBucket: "resepsaver.appspot.com",
-	    messagingSenderId: "104620766512",
-	    appId: "1:104620766512:web:47b12acaedf67edff144f5"
-	  };
+//   	var firebaseConfig = {
+// 	    apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+// 	    authDomain: "resepsaver.firebaseapp.com",
+// 	    databaseURL: "https://resepsaver.firebaseio.com",
+// 	    projectId: "resepsaver",
+// 	    storageBucket: "resepsaver.appspot.com",
+// 	    messagingSenderId: "104620766512",
+// 	    appId: "1:104620766512:web:47b12acaedf67edff144f5"
+// 	  };
 	  //firebase.initializeApp(firebaseConfig);
 	  console.log(firebase);
 		var database=firebase.database();  
