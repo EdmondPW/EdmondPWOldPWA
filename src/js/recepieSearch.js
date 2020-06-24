@@ -10,7 +10,11 @@ $( "#inputSearch" ).click(function() {
             }
         })
         .then(response => {
-            console.log(response);
+            response.json().then(function(d){
+                for(i in d.hits){
+                    console.log(i);
+                }
+            }
         })
         .catch(err => {
             console.log(err);
