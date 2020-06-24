@@ -14,7 +14,7 @@ $( "#inputSearch" ).click(function() {
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response.hit);
+        console.log(response.hits);
     });
     //var settings = {
       //"async": true,
