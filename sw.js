@@ -11,6 +11,7 @@ self.addEventListener('install', function(event) {
         cache.addAll([
           '/',
           './index.html',
+          './offline.html',
           './favicon.ico',
           './src/js/bootstrap/bootstrap.min.js',
           './src/js/bootstrap/bootstrap.min.js.map',
@@ -68,7 +69,10 @@ self.addEventListener('fetch', function(event) {
                 })
             })
             .catch(function(err) {
-
+              return caches.open(CACHE_STATIC_NAME)
+                .then(function(cache) {
+                  return cache.match('./offline.html');
+                });
             });
         }
       })
