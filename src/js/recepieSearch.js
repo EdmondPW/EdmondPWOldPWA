@@ -20,7 +20,7 @@ $( "#inputSearch" ).click(function() {
 		})
         .then(response => response.json()).then(function(data){
         	for(i in data.hits){
-        	 show.innerHTML += " <div class='card mb-3' style='width: 18rem;'> <img id='img' class='card-img-top' src='"+data.hits[i].recipe.image+"'<div class='card-block'> <h4 class='card-title'>"+data.hits[i].recipe.label+"</h4> <p class='card-text'> Kalori: "+data.hits[i].recipe.calories+" </p><a href='#' id='save"+i+"' class='btn btn-primary' style='align: center'>Save Recipe</a> </div> </div>";
+        	 show.innerHTML += " <div class='card mb-3' style='width: 18rem;'> <img id='img' class='card-img-top' src='"+data.hits[i].recipe.image+"'><div class='card-block'> <h4 class='card-title'>"+data.hits[i].recipe.label+"</h4> <p class='card-text'> Kalori: "+data.hits[i].recipe.calories+" </p><a href='#' id='save"+i+"' class='btn btn-primary' style='align: center'>Save Recipe</a> </div> </div>";
         		for(j in data.hits[i].recipe.ingredientLines){
         		console.log("Bumbu: "+data.hits[i].recipe.ingredientLines[j]);
         		data.hits[i].recipe.ingredientLines[j]
