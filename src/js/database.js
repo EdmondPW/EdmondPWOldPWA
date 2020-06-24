@@ -29,7 +29,17 @@ var firebaseConfig = {
          }
 
         function signup(){
-          
+          console.log("tes");
+          var email=document.getElementById("email");
+          var password=document.getElementById("pass");
+
+          const promise=auth.createUserWithEmailAndPassword(email.value,password.value);
+          promise.catch(function(err){
+             alert("Gagal SignUp");
+          });
+
+          alert("Sign Up");
+          window.location.href="./login";
         }
 
         function signin(){
