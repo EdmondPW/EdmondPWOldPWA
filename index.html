@@ -17,11 +17,42 @@
     <link rel="hat-icon" href="/src/images/icons/icon-192x192.png" sizes="192x192">
     <link rel="hat-icon" href="/src/images/icons/icon-384x384.png" sizes="384x384">
     <link rel="hat-icon" href="/src/images/icons/icon-512x512.png" sizes="512x512">
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
     <title>Recipe Saver</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyABQG0uk7MI0upKCVegOMF_3bjIwvxDQgM",
+        authDomain: "resepsaver.firebaseapp.com",
+        databaseURL: "https://resepsaver.firebaseio.com",
+        projectId: "resepsaver",
+        storageBucket: "resepsaver.appspot.com",
+        messagingSenderId: "104620766512",
+        appId: "1:104620766512:web:47b12acaedf67edff144f5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.auth.Auth.Persistence.LOCAL;
 
+      firebase.auth().onAuthStateChanged(function(res){
+      if(res){
+        alert("Welcome")
+      }
+      else{
+        alert("You must sign in")
+        window.location.href="login.html";
+      }
+     })
+//       firebase.auth().signOut().then(function() {
+//       // Sign-out successful.
+//       }).catch(function(error) {
+//         // An error happened.
+//       });
+    </script>
+    <h1>Test</h1>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="row">
