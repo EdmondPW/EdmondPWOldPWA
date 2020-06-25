@@ -125,8 +125,9 @@ var firebaseConfig = {
                                         var k = keys[i];
                                         console.log(detailresep[k].email);
                                         //showstored.innerHTML += i + "<br>";
+                                        console.log("Testing detail");
                                         if(email==detailresep[k].email && indexdetail==i){
-                                                 console.log(detailresep[k].label);
+                                                 console.log("Detail: "+detailresep[k].label);
                                          //showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
                                         }
                               }
