@@ -18,6 +18,8 @@ self.addEventListener('install', function(event) {
           './src/js/jquery/jquery-3.5.1.min.js',
           './src/css/bootstrap/bootstrap.min.css',
           './src/css/bootstrap/bootstrap.min.css.map',
+          './src/css/bootstrap/desktop.css',
+          './src/css/bootstrap/smartphone.css',
           './manifest.json',
           './src/js/promise.js',
           './src/js/app.js',
