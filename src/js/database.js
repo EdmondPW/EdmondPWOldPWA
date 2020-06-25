@@ -111,7 +111,7 @@ var firebaseConfig = {
                     }
           indexdetailtemp=indexdetail;
           function showDetail(){
-                    indexdetailtemp=localStorage.getItem(idx);
+                    indexdetailtemp=localStorage.getItem("idx");
                     alert("SHOW Detail :"+indexdetailtemp);
           }
             function getDetailResep(){
@@ -121,7 +121,7 @@ var firebaseConfig = {
                   }
 
              function getDataDetail(data){
-                              indexdetail= localStorage.getItem(idx);
+                              indexdetail= localStorage.getItem("idx");
                               alert(indexdetail);
                               var detailresep=data.val();
                               var keys=Object.keys(detailresep);
