@@ -33,22 +33,26 @@ var firebaseConfig = {
 //            })
                    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
                       .then(function() {
-                        // Existing and future Auth states are now persisted in the current
-                        // session only. Closing the window would clear any existing state even
-                        // if a user forgets to sign out.
-                        // ...
-                        // New sign-in will be persisted with session persistence.
-                             var user = firebase.auth().currentUser;
-                              email='';
-                              if (user != null) {
-                                email = user.email;
-                              }
+                        firebase.auth().onAuthStateChanged(function(res){
+                                if(res){
+                                        alert("Welcome")
+                                        var user = firebase.auth().currentUser;
+                                        email='';
+                                        if (user != null) {
+                                          email = user.email;
+                                        }
+                                }
+                                else{
+                                  alert("You must sign in")
+                                  window.location.href="./login";
+                                }
+                               })
                         return firebase.auth().signInWithEmailAndPassword(email, password);
                       })
                       .catch(function(error) {
                         // Handle Errors here.
-                        alert("You must sign in")
-                        window.location.href="./login";
+                        //alert("You must sign in")
+                        //window.location.href="./login";
                         var errorCode = error.code;
                         var errorMessage = error.message;
                       });
