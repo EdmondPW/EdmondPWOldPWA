@@ -111,6 +111,7 @@ var firebaseConfig = {
                     }
           indexdetailtemp=indexdetail;
           function showDetail(){
+                    indexdetailtemp=localStorage.getItem(idx);
                     alert("SHOW Detail :"+indexdetailtemp);
           }
             function getDetailResep(){
