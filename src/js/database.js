@@ -106,10 +106,9 @@ var firebaseConfig = {
                          indexdetail=document.getElementById("detail"+idx).value;;
                        alert("Detail idx: "+indexdetail);
                               window.location.href="../../detail";
-                              getDataDetailForce();
                     }
-          function getDataDetailForce(){
-                    getDataDetailResep();
+          function showDetail(){
+                    alert("SHOW Detail :"+indexdetail);
           }
             function getDetailResep(){
                       database=firebase.database();
