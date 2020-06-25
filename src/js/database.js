@@ -83,8 +83,6 @@ var firebaseConfig = {
             ref.on('value', getData, errData);
         }
           function getData(data){
-                    
-                    showstored='';
                     var dataresep=data.val();
                     var keys=Object.keys(dataresep);
                     console.log(keys);
