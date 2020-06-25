@@ -74,8 +74,13 @@ var firebaseConfig = {
           
         }
               
-        function saveRecipie(){
-          
+        function signout(){
+          firebase.auth().signOut().then(function() {
+                    alert("Sign Out");
+                     window.location.href="../../login";
+          }).catch(function(error) {
+            // An error happened.
+          });
         }
 
         function getRecipe(){
