@@ -79,7 +79,7 @@ var firebaseConfig = {
         function getRecipe(){
             database=firebase.database();
             var ref=database.ref('resepfavorit');
-            ref.on('value', goData, errData);
+            ref.on('value', getData, errData);
         }
           function getData(data){
                     var dataresep=data.val();
