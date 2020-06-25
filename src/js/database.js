@@ -74,7 +74,7 @@ var firebaseConfig = {
               var indexdetail;
              function detail(idx){
                               indexdetail=idx;
-                              window.location.href=".../../detail"
+                              window.location.href="../../detail"
                               
                     }
             function getDetailResep(){
