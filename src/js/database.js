@@ -17,45 +17,20 @@ var firebaseConfig = {
         const auth=firebase.auth();
           var email='';
          function cekIfLoginOrNot(){
-//             firebase.auth().onAuthStateChanged(function(res){
-//             if(res){
-//                     alert("Welcome")
-//                     var user = firebase.auth().currentUser;
-//                     email='';
-//                     if (user != null) {
-//                       email = user.email;
-//                     }
-//             }
-//             else{
-//               alert("You must sign in")
-//               window.location.href="./login";
-//             }
-//            })
-                   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-                      .then(function() {
-                        firebase.auth().onAuthStateChanged(function(res){
-                                if(res){
-                                        alert("Welcome")
-                                        var user = firebase.auth().currentUser;
-                                        email='';
-                                        if (user != null) {
-                                          email = user.email;
-                                        }
-                                }
-                                else{
-                                  alert("You must sign in")
-                                  window.location.href="./login";
-                                }
-                               })
-                        return firebase.auth().signInWithEmailAndPassword(email, password);
-                      })
-                      .catch(function(error) {
-                        // Handle Errors here.
-                        //alert("You must sign in")
-                        //window.location.href="./login";
-                        var errorCode = error.code;
-                        var errorMessage = error.message;
-                      });
+            firebase.auth().onAuthStateChanged(function(res){
+            if(res){
+                    alert("Welcome")
+                    var user = firebase.auth().currentUser;
+                    email='';
+                    if (user != null) {
+                      email = user.email;
+                    }
+            }
+            else{
+              alert("You must sign in")
+              window.location.href="./login";
+            }
+           })
          }
 
         function signup(){
@@ -76,16 +51,25 @@ var firebaseConfig = {
           //alert("tes");
           var email=document.getElementById("email");
           var password=document.getElementById("pass");
-
-          const promise=auth.signInWithEmailAndPassword(email.value,password.value);
-          promise.catch(function(err){
-                                  alert("Gagal Login");
-                                  });
-          auth.onAuthStateChanged(function(res){
-              if(res){
-                  window.location.href="../index.html";
-              }
-          })
+           firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+                      .then(function() {
+                         const promise=auth.signInWithEmailAndPassword(email.value,password.value);
+                              promise.catch(function(err){
+                                                      alert("Gagal Login");
+                                                      });
+                              auth.onAuthStateChanged(function(res){
+                                  if(res){
+                                      window.location.href="../index.html";
+                                  }
+                               })
+                        //return promise;
+                      })
+                      .catch(function(error) {
+                        // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                      });
+          
         }
 
         function saveRecipie(){
