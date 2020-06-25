@@ -76,7 +76,20 @@ var firebaseConfig = {
           
         }
 
-        function unSaveRecipe(){
-          
+        function getRecipe(){
+            database=firebase.database();
+            var ref=database.ref('resepfavorit');
+            ref.on('value', goData, errData);
         }
+          function getData(data){
+                    var dataresep=data.val();
+                    var keys=Object.keys(dataresep);
+                    console.log(keys);
+                    
+          }
+
+          function errData(err){
+                console.log("Error: ");
+                console.log(err);
+          }
         
