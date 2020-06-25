@@ -117,7 +117,7 @@ var firebaseConfig = {
                               var detailresep=data.val();
                               var keys=Object.keys(detailresep);
                               var index=document.get
-                              console.log(keys);
+                              //console.log(keys);
                               var showdetailresep=document.getElementById('showdetail');
                               //var k=keys[indexdetail];
                               //showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
