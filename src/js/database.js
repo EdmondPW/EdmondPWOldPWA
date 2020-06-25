@@ -129,18 +129,13 @@ var firebaseConfig = {
                               var showdetailresep=document.getElementById('showdetail');
                               console.log("Index detail: "+indexdetail);
                               var k=keys[indexdetail];
-                              showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"' class='img-fluid' style='width:350px;'><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div></center>"     
-                              for(var i=0;i<keys.length;i++){
-                                        var k = keys[i];
-                                        console.log("Nilai K: "+k)
-                                        console.log(detailresep[k].email);
-                                        //showstored.innerHTML += i + "<br>";
-                                        console.log("Testing detail");
-                                        if(email==detailresep[k].email && indexdetail==i){
-                                                 console.log("Detail: "+detailresep[k].label);
-                                         //showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
-                                        }
+                              var resepstr=detailresep[k].resep;
+                              var reseparr=str.split(",");
+                              showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"' class='img-fluid' style='width:350px;'><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"</h2><br><ul>"     
+                              for(var i=0;i<reseparr.length;i++){
+                                     showdetailresep.innerHTML += "<li>"+reseparr[i]+"</li>"
                               }
+                              showdetailresepinnerHTML += "</ul></div></center>"
                     }
           function errDataDetail(err){
                 console.log("Error: ");
