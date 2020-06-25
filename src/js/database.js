@@ -17,6 +17,7 @@ var firebaseConfig = {
         const auth=firebase.auth();
           var email='';
           var indexdetail=0;
+          var indexdetailtemp=0;
          function cekIfLoginOrNot(){
             firebase.auth().onAuthStateChanged(function(res){
             if(res){
@@ -107,8 +108,9 @@ var firebaseConfig = {
                        alert("Detail idx: "+indexdetail);
                               window.location.href="../../detail";
                     }
+          indexdetailtemp=indexdetail;
           function showDetail(){
-                    alert("SHOW Detail :"+indexdetail);
+                    alert("SHOW Detail :"+indexdetailtemp);
           }
             function getDetailResep(){
                       //database=firebase.database();
