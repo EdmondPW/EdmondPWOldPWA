@@ -103,7 +103,7 @@ var firebaseConfig = {
                 console.log(err);
           }
              function detail(idx){
-                       aler("Detail idx before: "+indexdetail);
+                       alert("Detail idx before: "+indexdetail);
                          indexdetail=document.getElementById("detail"+idx).value;;
                        alert("Detail idx: "+indexdetail);
                               window.location.href="../../detail";
