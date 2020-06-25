@@ -149,4 +149,5 @@ $( "#inputSearch" ).click(function() {
 			resep: resepsave
 		  }
 		 ref.push(data);
+	  alert("Berhasil Menyimpan");
   	}
