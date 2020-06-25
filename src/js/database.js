@@ -104,7 +104,8 @@ var firebaseConfig = {
           }
              function detail(idx){
                        alert("Detail idx before: "+indexdetail);
-                         indexdetail=document.getElementById("detail"+idx).value;;
+                         indexdetail=document.getElementById("detail"+idx).value;
+                         localStorage.idx   = indexdetail;
                        alert("Detail idx: "+indexdetail);
                               window.location.href="../../detail";
                     }
@@ -119,6 +120,7 @@ var firebaseConfig = {
                   }
 
              function getDataDetail(data){
+                              indexdetail= localStorage.idx;
                               var detailresep=data.val();
                               var keys=Object.keys(detailresep);
                               //console.log(keys);
