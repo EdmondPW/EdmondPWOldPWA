@@ -15,11 +15,16 @@ var firebaseConfig = {
         firebase.auth.Auth.Persistence.LOCAL;
 
         const auth=firebase.auth();
-
+          var email='';
          function cekIfLoginOrNot(){
             firebase.auth().onAuthStateChanged(function(res){
             if(res){
-              alert("Welcome")
+                    alert("Welcome")
+                    var user = firebase.auth().currentUser;
+                    email='';
+                    if (user != null) {
+                      email = user.email;
+                    }
             }
             else{
               alert("You must sign in")
