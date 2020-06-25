@@ -19,7 +19,7 @@ var firebaseConfig = {
          function cekIfLoginOrNot(){
             firebase.auth().onAuthStateChanged(function(res){
             if(res){
-                    alert("Welcome")
+                    //alert("Welcome")
                     var user = firebase.auth().currentUser;
                     email='';
                     if (user != null) {
