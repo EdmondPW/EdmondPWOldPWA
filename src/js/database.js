@@ -115,7 +115,7 @@ var firebaseConfig = {
                     alert("SHOW Detail :"+indexdetailtemp);
           }
             function getDetailResep(){
-                      //database=firebase.database();
+                      database=firebase.database();
                       var ref=database.ref('resepfavorit');
                       ref.on('value', getDataDetail, errDataDetail);
                   }
