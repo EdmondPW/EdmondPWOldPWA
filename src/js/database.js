@@ -129,7 +129,7 @@ var firebaseConfig = {
                               var showdetailresep=document.getElementById('showdetail');
                               console.log("Index detail: "+indexdetail);
                               var k=keys[indexdetail];
-                              showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"' class='img-fluid'><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div></center>"     
+                              showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"' class='img-fluid' style='width:350px;'><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div></center>"     
                               for(var i=0;i<keys.length;i++){
                                         var k = keys[i];
                                         console.log("Nilai K: "+k)
