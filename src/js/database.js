@@ -130,7 +130,7 @@ var firebaseConfig = {
                               console.log("Index detail: "+indexdetail);
                               var k=keys[indexdetail];
                               var resepstr=detailresep[k].resep;
-                              var reseparr=str.split(",");
+                              var reseparr=resepstr.split(",");
                               showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"' class='img-fluid' style='width:350px;'><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"</h2><br><ul>"     
                               for(var i=0;i<reseparr.length;i++){
                                      showdetailresep.innerHTML += "<li>"+reseparr[i]+"</li>"
