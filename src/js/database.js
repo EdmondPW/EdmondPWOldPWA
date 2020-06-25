@@ -80,7 +80,7 @@ var firebaseConfig = {
             function getDetailResep(){
                       database=firebase.database();
                       var ref=database.ref('resepfavorit');
-                      ref.on('value', getDataDetail, errDataDetail);
+                      ref.on('value', getDataDetail, errData);
                   }
 
              function getDataDetail(data){
