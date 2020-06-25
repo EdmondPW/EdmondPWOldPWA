@@ -142,7 +142,7 @@ $( "#inputSearch" ).click(function() {
 		var database=firebase.database();  
 		var ref=database.ref('resepfavorit');
 		var data={
-			email: "edmond@mail.com",
+			email: email,
 			label: label[index],
 			kalori: calories[index],
 			image: images[index],
