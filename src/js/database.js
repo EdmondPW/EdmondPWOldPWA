@@ -120,7 +120,8 @@ var firebaseConfig = {
                   }
 
              function getDataDetail(data){
-                              indexdetail= localStorage.idx;
+                              indexdetail= localStorage.getItem(idx);
+                              alert(indexdetail);
                               var detailresep=data.val();
                               var keys=Object.keys(detailresep);
                               //console.log(keys);
