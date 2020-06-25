@@ -36,7 +36,7 @@ var firebaseConfig = {
          }
 
         function signup(){
-          console.log("tes");
+          //console.log("tes");
           var email=document.getElementById("email");
           var password=document.getElementById("pass");
 
@@ -103,10 +103,10 @@ var firebaseConfig = {
                 console.log(err);
           }
              function detail(idx){
-                       alert("Detail idx before: "+indexdetail);
+                       //alert("Detail idx before: "+indexdetail);
                          indexdetail=document.getElementById("detail"+idx).value;
                          localStorage.idx   = indexdetail;
-                       alert("Detail idx: "+indexdetail);
+                       //alert("Detail idx: "+indexdetail);
                               window.location.href="../../detail";
                     }
           indexdetailtemp=indexdetail;
@@ -122,7 +122,7 @@ var firebaseConfig = {
 
              function getDataDetail(data){
                               indexdetail= localStorage.getItem("idx");
-                              alert(indexdetail);
+                              //alert(indexdetail);
                               var detailresep=data.val();
                               var keys=Object.keys(detailresep);
                               //console.log(keys);
