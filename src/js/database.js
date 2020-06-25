@@ -71,33 +71,7 @@ var firebaseConfig = {
                       });
           
         }
-              var indexdetail;
-             function detail(idx){
-                              indexdetail=idx;
-                              window.location.href="../../detail"
-                              
-                    }
-            function getDetailResep(){
-                      database=firebase.database();
-                      var ref=database.ref('resepfavorit');
-                      ref.on('value', getDataDetail, errData);
-                  }
-
-             function getDataDetail(data){
-                              var detailresep=data.val();
-                              var keys=Object.keys(detailresep);
-                              var index=document.get
-                              console.log(keys);
-                              var showdetailresep=document.getElementById('showdetail');
-                              for(var i=0;i<keys.length;i++){
-                                        var k = keys[i];
-                                        console.log(detailresep[k].email);
-                                        //showstored.innerHTML += i + "<br>";
-                                        if(email==detailresep[k].email && indexdetail==i){
-                                         showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
-                                        }
-                              }
-                    }
+              
         function saveRecipie(){
           
         }
@@ -126,4 +100,35 @@ var firebaseConfig = {
                 console.log("Error: ");
                 console.log(err);
           }
-        
+        var indexdetail;
+             function detail(idx){
+                       alert("Detail");
+                              indexdetail=idx;
+                              window.location.href="../../detail";
+                              
+                    }
+            function getDetailResep(){
+                      database=firebase.database();
+                      var ref=database.ref('resepfavorit');
+                      ref.on('value', getDataDetail, errDataDetail);
+                  }
+
+             function getDataDetail(data){
+                              var detailresep=data.val();
+                              var keys=Object.keys(detailresep);
+                              var index=document.get
+                              console.log(keys);
+                              var showdetailresep=document.getElementById('showdetail');
+                              for(var i=0;i<keys.length;i++){
+                                        var k = keys[i];
+                                        console.log(detailresep[k].email);
+                                        //showstored.innerHTML += i + "<br>";
+                                        if(email==detailresep[k].email && indexdetail==i){
+                                         showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
+                                        }
+                              }
+                    }
+          function errDataDetail(err){
+                console.log("Error: ");
+                console.log(err);
+          }
