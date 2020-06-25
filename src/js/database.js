@@ -119,16 +119,17 @@ var firebaseConfig = {
                               var index=document.get
                               console.log(keys);
                               var showdetailresep=document.getElementById('showdetail');
-                              var k=keys[indexdetail];
-                              showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
-//                               for(var i=0;i<keys.length;i++){
-//                                         var k = keys[i];
-//                                         console.log(detailresep[k].email);
-//                                         //showstored.innerHTML += i + "<br>";
-//                                         if(email==detailresep[k].email && indexdetail==i){
-//                                          //showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
-//                                         }
-//                               }
+                              //var k=keys[indexdetail];
+                              //showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
+                              for(var i=0;i<keys.length;i++){
+                                        var k = keys[i];
+                                        console.log(detailresep[k].email);
+                                        //showstored.innerHTML += i + "<br>";
+                                        if(email==detailresep[k].email && indexdetail==i){
+                                                 console.log(detailresep[k].label);
+                                         //showdetailresep.innerHTML += "<center><img src='"+detailresep[k].image+"'></center><div class='row'><div class='col-md-4'><br><h2>"+detailresep[k].label+"<p>"+detailresep[k].resep+"</p></div>"     
+                                        }
+                              }
                     }
           function errDataDetail(err){
                 console.log("Error: ");
