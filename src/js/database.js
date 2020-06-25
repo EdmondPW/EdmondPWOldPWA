@@ -77,7 +77,7 @@ var firebaseConfig = {
         function signout(){
           firebase.auth().signOut().then(function() {
                     alert("Sign Out");
-                     window.location.href="../../login";
+                     window.link.href="https://edmondpw.github.io/login/";
           }).catch(function(error) {
             // An error happened.
           });
