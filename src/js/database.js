@@ -16,7 +16,6 @@ var firebaseConfig = {
 
         const auth=firebase.auth();
           var email='';
-          var showstored=document.getElementById('showresep');
          function cekIfLoginOrNot(){
             firebase.auth().onAuthStateChanged(function(res){
             if(res){
@@ -86,10 +85,12 @@ var firebaseConfig = {
                     var dataresep=data.val();
                     var keys=Object.keys(dataresep);
                     console.log(keys);
+                    var showstored=document.getElementById('showresep');
                     for(var i=0;i<keys.length;i++){
                               var k = keys[i];
                               console.log(dataresep[k].email);
-                              showstored.innerHTML += " <div class='card mb-3' style='width: 18rem;'> <img id='img' class='card-img-top' src='"+dataresep[k].image+"'<div class='card-block'> <h4 class='card-title'>"+dataresep[k].label+"</h4> <p class='card-text'> Kalori: "+dataresep[k].kalori+" </p><button onclick='detail("+i+")' id='detail"+i+"' value='"+i+"' class='btn btn-primary' style='align: center'>Detail</button> </div> </div>";
+                             // showstored.innerHTML += " <div class='card mb-3' style='width: 18rem;'> <img id='img' class='card-img-top' src='"+dataresep[k].image+"'<div class='card-block'> <h4 class='card-title'>"+dataresep[k].label+"</h4> <p class='card-text'> Kalori: "+dataresep[k].kalori+" </p><button onclick='detail("+i+")' id='detail"+i+"' value='"+i+"' class='btn btn-primary' style='align: center'>Detail</button> </div> </div>";
+                              showstored.innerHTML += i + "<br>";
 //                               if(email==dataresep[k].email){
                                         
 //                               }
