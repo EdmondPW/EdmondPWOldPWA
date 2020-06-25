@@ -8,6 +8,7 @@
     var totali=0;
     var totalj=[];
 $( "#inputSearch" ).click(function() {
+	console.log(email);
 		totali=0;
 		totalj=[];
 		searchInput='';
